@@ -32,20 +32,33 @@ body{
   }
   
   .logo {
+ 
+    gap: 5px;
     display: flex;
-    align-items: center;
-    gap: 8px;
+  
+    justify-items: center;
+    
   }
   
   .logo img {
-    width: 32px;
-    height: 32px;
+    width: 33px;
+    height: 33px;
+
+  
   }
   
-  .logo span {
+  .menu-icon {
+    display: none;
     font-size: 24px;
+    color: #1d1d1f;
+    cursor: pointer;
+  }
+  .logo p {
+    font-size: 20px;
     font-weight: 900;
     color: #1d1d1f;
+  
+    
   }
   
   .nav-links {
@@ -98,3 +111,30 @@ body{
   .login-btn:hover {
     background-color: #4338ca;
   }
+
+
+
+  /* Responsive behavior */
+@media (max-width: 768px) {
+  .nav-links, .actions {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    z-index: 10;
+  }
+
+  .nav-links.show, .actions.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
