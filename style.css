@@ -1,122 +1,166 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-    font-family: "Plus Jakarta Sans", sans-serif;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
-body{
 
-    max-width:1240px;
-    margin: 0 auto;
+body {
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 /* Header aNavbar part */
 
 .navbar {
-    width: 100%;
-    padding: 20px 0;
-    
-  }
-  
-  .container {
-    max-width: 1240px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-  
-  .logo {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  gap: 5px;
+  display: flex;
+
+  justify-items: center;
+}
+
+.logo img {
+  width: 33px;
+  height: 33px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #1d1d1f;
+  cursor: pointer;
+}
+.logo p {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1d1d1f;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1d1d1fc3;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.signup-btn,
+.login-btn {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #1d1d1f;
+}
+
+.signup-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.login-btn {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+}
+
+.login-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Hero section */
+
+.hero-container{
+  background: linear-gradient(180deg, #ffffff 0%, #a1c8e7 30%, #bb95e0 100%);
+
+}
+.full-text {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.first-text {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.first-text {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #6366f1;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.last-text {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: rgba(2, 6, 23, 0.747);
+}
+
+.hero-text h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.download-app {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dashboard
+{
  
-    gap: 5px;
-    display: flex;
-  
-    justify-items: center;
-    
-  }
-  
-  .logo img {
-    width: 33px;
-    height: 33px;
+  width: 900px;
+  margin: 30px auto;
+}
 
-  
-  }
-  
-  .menu-icon {
-    display: none;
-    font-size: 24px;
-    color: #1d1d1f;
-    cursor: pointer;
-  }
-  .logo p {
-    font-size: 20px;
-    font-weight: 900;
-    color: #1d1d1f;
-  
-    
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 24px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #1d1d1fc3;
-    font-weight: 700;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #4f46e5;
-  }
-  
-  .actions {
-    display: flex;
-    gap: 12px;
-  }
-  
-  .signup-btn,
-  .login-btn {
-    padding: 10px 20px;
-    border-radius: 9999px;
-    font-weight: 500;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .signup-btn {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    color: #1d1d1f;
-  }
-  
-  .signup-btn:hover {
-    background-color: #f3f4f6;
-  }
-  
-  .login-btn {
-    background-color: #4f46e5;
-    color: white;
-    border: none;
-  }
-  
-  .login-btn:hover {
-    background-color: #4338ca;
-  }
-
-
-
-  /* Responsive behavior */
+/* Responsive behavior */
 @media (max-width: 768px) {
-  .nav-links, .actions {
+  .nav-links,
+  .actions {
     display: none;
     position: absolute;
     top: 80px;
@@ -125,12 +169,13 @@ body{
     flex-direction: column;
     padding: 20px;
     gap: 16px;
-    box-shadow: 0px 8px 24px rgba(0,0,0,0.1);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     z-index: 10;
   }
 
-  .nav-links.show, .actions.show {
+  .nav-links.show,
+  .actions.show {
     display: flex;
   }
 
